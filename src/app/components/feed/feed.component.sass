@@ -1,0 +1,47 @@
+$primary : #242424
+    
+#feed_container
+    display: grid
+    grid-template-columns: 1fr
+    gap: 1vh
+    margin-top: 1vh
+    p
+        font-size: 1.1em
+    
+    #stories_container
+        display: grid
+        height: 24vh
+        gap: 3%
+        width: 100%
+        align-items: center
+        justify-items: center
+        grid-auto-flow: column
+        text-align: center
+        .story
+            width: 7vw
+            height: 90%
+            background-color: $primary
+            border-radius: 10px
+    .noScroll
+        overflow-x: hidden
+    .scroll
+        overflow-x: scroll
+    
+    #createPost
+        height: 10vh
+        width: 100%
+        background-color: $primary
+        border-radius: 10px
+        text-align: center
+        margin-bottom: 1vh
+    
+    #feed
+        display: grid
+        grid-auto-flow: row
+        gap:2vh
+        .post
+            height: 40vh
+            width: 100%
+            background-color: $primary
+            border-radius: 10px
+            text-align: center

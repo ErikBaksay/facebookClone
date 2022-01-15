@@ -1,0 +1,16 @@
+<div id="feed_container">
+    <div id="stories_container" 
+    [ngClass]="(numberOfStories <= 4) ? 'noScroll' : 'scroll' ">
+        <div class="story" *ngFor="let story of stories">
+            STORY
+        </div>
+    </div>
+    <div id="createPost">
+        CREATE POST
+    </div>
+    <div id="feed">
+        <div class="post" *ngFor="let post of posts">
+            POST
+        </div>
+    </div>
+</div>

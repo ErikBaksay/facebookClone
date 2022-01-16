@@ -1,11 +1,35 @@
 <div id="rightPanel">
+    
     <div id="groups">
         GROUPS
     </div>
+
+    <div class="border"></div>
+
     <div id="ads">
-        ADS
+        <p>ADS</p>
+        <div class="ad" *ngFor="let ad of ads">
+            <div class="ad_image">
+
+            </div>
+            <div class="ad_text">
+                AD TITLE
+            </div>
+        </div>
     </div>
+
+    <div class="border"></div>
+
     <div id="contacts">
-        CONTACTS
+        <p>CONTACTS</p>
+        <div class="contact" *ngFor="let contact of contacts">
+            <div class="contact_photo">
+
+            </div>
+            <div class="contact_name">
+                <p>Name</p>
+            </div>
+        </div>
     </div>
+
 </div>

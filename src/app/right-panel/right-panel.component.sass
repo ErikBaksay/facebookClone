@@ -1,0 +1,60 @@
+$primary : #242424
+$rightPanelWidth : ((100/3)/2)*1vw
+$adImageDimensions : ((100/3)/2/2.4)*1vw
+$maxHeightOfContent : 100vh - 9vh
+
+#rightPanel
+    display: grid
+    grid-auto-flow: row
+    gap:2vh
+    width: $rightPanelWidth
+    max-height: $maxHeightOfContent
+    position: fixed
+    right: 0
+    margin-top: 3vh
+    margin-right: 1.5vw
+    overflow-y: scroll
+    #groups
+        text-align: center 
+        background: $primary
+        border-radius: 10px
+        width: 100%
+        height: 30vh
+    #ads
+        display: grid
+        grid-auto-flow: row
+        gap:2vh
+        .ad
+            display: flex
+            flex-direction: row
+            align-items: center          
+            .ad_image
+                height: $adImageDimensions
+                width: $adImageDimensions
+                background-color: $primary
+                border-radius: 10px
+            .ad_text
+                margin-left: 1vw
+    #contacts
+        display: grid
+        grid-auto-flow: row
+        gap: 1vh
+        .contact
+            display: flex
+            flex-direction: row
+            margin-bottom: 1vh
+            .contact_photo
+                background-color: $primary
+                height: 4vh
+                width: 4vh
+                border-radius: 100px
+            .contact_name
+                display: flex
+                align-items: center
+                margin-left: 1vw
+                p
+                    margin-bottom: 0
+
+    .border
+        border-bottom: 1px solid #424242
+

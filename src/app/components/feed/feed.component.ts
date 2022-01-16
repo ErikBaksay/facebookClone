@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedComponent implements OnInit {
 
-  stories = [1,1,1,1]
+  stories = [1,2,3,4,5]
   numberOfStories = this.stories.length
 
   posts = [1,2,3]

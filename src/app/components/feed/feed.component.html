@@ -4,7 +4,7 @@
         
         <div class="createStory">
             <div id="storyMyProfilePictureDIV">
-                <img src="../../../assets/images/profile_pictures/0.jpg" alt="My profile picture">
+                <img src="./assets/images/profile_pictures/0.jpg" alt="My profile picture">
             </div>
             <div id="plusSign">
                 +
@@ -16,11 +16,11 @@
 
         <div class="story" *ngFor="let story of stories" style="background-image:url({{story.photo}})">
             <div class="storyProfilePictureContainer">
-                <img class="storyProfilePicture" src="{{users[story.userID].profilePicture}}" alt="Profile photo">
+                <img class="storyProfilePicture" src="{{users[story.userID-1].profilePicture}}" alt="Profile photo">
             </div>
             <div class="storyUserDiv">
-                <p class='storyUser firstName'>{{users[story.userID].firstName}}</p>
-                <p class='storyUser lastName'>{{users[story.userID].lastName}}</p>    
+                <p class='storyUser firstName'>{{users[story.userID-1].firstName}}</p>
+                <p class='storyUser lastName'>{{users[story.userID-1].lastName}}</p>    
             </div>
         </div>
 

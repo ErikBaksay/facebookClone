@@ -1,9 +1,29 @@
 <div id="feed_container">
     <div id="stories_container" 
     [ngClass]="(numberOfStories <= 4) ? 'noScroll' : 'scroll' ">
-        <div class="story" *ngFor="let story of stories">
-            STORY
+        
+        <div class="createStory">
+            <div id="storyMyProfilePictureDIV">
+                <img src="../../../assets/images/profile_pictures/0.jpg" alt="My profile picture">
+            </div>
+            <div id="plusSign">
+                +
+            </div>
+            <div id="createStoryDiv">
+                <p id="createStory">Create a story</p>
+            </div>
         </div>
+
+        <div class="story" *ngFor="let story of stories" style="background-image:url({{story.photo}})">
+            <div class="storyProfilePictureContainer">
+                <img class="storyProfilePicture" src="{{users[story.userID].profilePicture}}" alt="Profile photo">
+            </div>
+            <div class="storyUserDiv">
+                <p class='storyUser firstName'>{{users[story.userID].firstName}}</p>
+                <p class='storyUser lastName'>{{users[story.userID].lastName}}</p>    
+            </div>
+        </div>
+
     </div>
     <div id="createPost">
         CREATE POST

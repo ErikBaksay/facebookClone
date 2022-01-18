@@ -7,8 +7,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FeedComponent } from './components/feed/feed.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainPageComponent } from './components/main-page/main-page.component';
-import { LeftPanelComponent } from './left-panel/left-panel.component';
-import { RightPanelComponent } from './right-panel/right-panel.component';
+import { LeftPanelComponent } from './components/left-panel/left-panel.component';
+import { RightPanelComponent } from './components/right-panel/right-panel.component';
 
 @NgModule({
   declarations: [

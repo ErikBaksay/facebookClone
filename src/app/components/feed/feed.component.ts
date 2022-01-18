@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { stories_data } from 'src/app/stories_data';
+import { users_data } from 'src/app/users_data';
 
 @Component({
   selector: 'app-feed',
@@ -7,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedComponent implements OnInit {
 
-  stories = [1,2,3,4,5]
+  stories = stories_data
   numberOfStories = this.stories.length
+
+  users = users_data
 
   posts = [1,2,3]
 

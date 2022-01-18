@@ -10,18 +10,92 @@ $primary : #242424
     
     #stories_container
         display: grid
-        height: 24vh
-        gap: 3%
+        height: 21vh
+        gap: 1.5%
         width: 100%
         align-items: center
         justify-items: center
         grid-auto-flow: column
         text-align: center
-        .story
-            width: 7vw
-            height: 90%
+        .createStory
+            display: grid
+            width: 5.5vw
+            height: 18vh
             background-color: $primary
             border-radius: 10px
+            grid-auto-flow: column
+            grid-template-rows: 12vh 0fr 1fr
+            grid-template-areas: "profilePicture" "plus" "create"
+            overflow: hidden
+            #storyMyProfilePictureDIV
+                grid-area: profilePicture
+                height: 12vh
+                overflow: hidden
+                justify-self: center
+                img
+                    height: 100%
+                    object-fit: cover
+            #plusSign
+                grid-area: plus
+                position: relative
+                bottom: 1.3vh
+                background-color: #147dbe
+                width: 2vh
+                height: 2vh
+                justify-self: center
+                border: 0.3vh solid $primary
+                border-radius: 10px       
+            #createStoryDiv
+                grid-area: create   
+                width: 50%
+                justify-self: center  
+                #createStory
+                    color: #ffffff
+                    font-size: 0.9em
+                    font-weight: 500
+                    margin-bottom: 0
+                    position: relative
+                    bottom: 1vh
+                    align-self: center
+                    text-align: center
+                    text-shadow: 0px 0px 3px black    
+        .story
+            width: 5.5vw
+            height: 18vh
+            background-color: $primary
+            background-repeat: no-repeat
+            background-size: cover
+            border-radius: 10px
+            overflow: hidden
+            display: grid
+            grid-auto-flow: column
+            grid-template-columns: 1fr 1fr
+            grid-template-areas: "profilePicture" "userName"
+            .storyProfilePictureContainer
+                height: 3vh
+                width: 3vh
+                border-radius: 20px
+                padding: 5px
+                grid-area: profilePicture
+                .storyProfilePicture
+                    object-fit: cover
+                    height: 100%
+                    border-radius: 20px
+                    border: solid 3px $primary
+            .storyUserDiv
+                height: fit-content    
+                grid-area: userName 
+                align-self: end
+                padding: 5px
+                .storyUser
+                    position: relative
+                    color: #ffffff
+                    font-size: 0.9em
+                    font-weight: 500
+                    margin-bottom: 0
+                    text-align: start
+                    margin-left: 8%
+                    text-shadow: 0px 0px 3px black
     .noScroll
         overflow-x: hidden
     .scroll

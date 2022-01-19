@@ -1,3 +1,4 @@
+import { MaterialModule } from './material/material.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -17,12 +18,13 @@ import { RightPanelComponent } from './components/right-panel/right-panel.compon
     FeedComponent,
     MainPageComponent,
     LeftPanelComponent,
-    RightPanelComponent
+    RightPanelComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

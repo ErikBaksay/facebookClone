@@ -13,6 +13,8 @@ export class FeedComponent implements OnInit {
   numberOfStories = this.stories.length
 
   users = users_data
+  myProfilePicture = "./assets/images/profile_pictures/0.jpg"
+  peopleOnline = [1,3,6]
 
   posts = [1,2,3]
 

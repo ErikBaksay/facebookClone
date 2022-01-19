@@ -4,7 +4,7 @@
         
         <div class="createStory">
             <div id="storyMyProfilePictureDIV">
-                <img src="./assets/images/profile_pictures/0.jpg" alt="My profile picture">
+                <img src="{{myProfilePicture}}" alt="My profile picture">
             </div>
             <div id="plusSign">
                 +
@@ -25,12 +25,79 @@
         </div>
 
     </div>
+
     <div id="createPost">
-        CREATE POST
-    </div>
-    <div id="feed">
-        <div class="post" *ngFor="let post of posts">
-            POST
+        <div id="write">
+            <div id=createPostProfilePicture style="background-image: url('{{myProfilePicture}}')"></div>
+            <input type="text" id="searchBar" placeholder="What's on your mind?">
+        </div>
+        <div id="create">
+            <button mat-button>
+                <span><mat-icon 
+                    aria-hidden="false" 
+                    aria-label="Live Video" 
+                    id="liveVideoIcon" 
+                    style="color:rgb(255,63,95);">
+                        videocam
+                    </mat-icon>
+                </span>
+                Live Video
+            </button>
+            <button mat-button>
+                <span><mat-icon 
+                    aria-hidden="false" 
+                    aria-label="Photo/video" 
+                    id="PhotoVideoIcon" 
+                    style="color:rgb(57,213,95);">
+                        photo_library
+                    </mat-icon>
+                </span>
+                Photo/video
+            </button>
+            <button mat-button>
+                <span><mat-icon 
+                    aria-hidden="false" 
+                    aria-label="Feeling/activity" 
+                    id="FeelingActivityIcon" 
+                    style="color:rgb(247,185,40)">
+                        mood
+                    </mat-icon>
+                </span>
+                Feeling/activity
+            </button>
         </div>
     </div>
+
+    <div id="createRoom"> 
+        <div>
+        <button mat-button id="createRoomButton">
+            <div id="createRoomButtonDiv">
+                <mat-icon 
+                aria-hidden="false" 
+                aria-label="Live Video" 
+                style="color:rgb(105, 48, 236)" 
+                id="createRoomButtonIcon">
+                    videocam
+                </mat-icon>
+                <p id="createRoomButtonText">Create Room</p>
+            </div>
+        </button>
+        </div>
+        <div id=personOnlineProfilePicture
+            style="background-image: url('{{users[personOnline-1].profilePicture}}')" 
+            *ngFor="let personOnline of peopleOnline">
+            <div class="onlineStatusCircleOuter">
+                <div class="onlineStatusCircleInner"></div>
+            </div>
+        </div>     
+    </div>
+
+    <div id="feed">
+        <div class="post" *ngFor="let post of posts">
+            <div class="header">Posted by</div>
+            <div id="content">heres a photo</div>
+            <div id="action">Some interaction</div>
+        </div>
+    </div>
+    
 </div>

@@ -83,7 +83,7 @@
             </div>
         </button>
         </div>
-        <div id=personOnlineProfilePicture
+        <div class=personOnlineProfilePicture
             style="background-image: url('{{users[personOnline-1].profilePicture}}')" 
             *ngFor="let personOnline of peopleOnline">
             <div class="onlineStatusCircleOuter">
@@ -93,10 +93,64 @@
     </div>
 
     <div id="feed">
-        <div class="post" *ngFor="let post of posts">
-            <div class="header">Posted by</div>
-            <div id="content">heres a photo</div>
-            <div id="action">Some interaction</div>
+        <div class="post" *ngFor="let post of posts, let i = index">
+            <div class="header">
+                <div class="profilePicture_post_container">
+                    <div 
+                    class="profilePicture_Post" 
+                    style="background-image:url({{users[post.userID-1].profilePicture}});" 
+                    alt="Profile picture">
+                    </div>
+                </div>
+                <div class="nameAndTime_post">
+                    <p class="name">{{users[post.userID-1].firstName}} {{users[post.userID-1].lastName}}</p>
+                    <p class="time">{{timePosted_temporary[i]}}</p>
+                </div>
+                <div class="options_post">
+                    <button mat-mini-fab class="options_post_button">
+                        <mat-icon>more_horiz</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div class="content">
+                <div class="textPostContainer">
+                    <p>{{post.text}}</p>
+                </div>
+                <div class="imagePostContainer">
+                    <img src="{{post.photo}}" alt="Photo">
+                </div> 
+            </div>
+            <div class="action">
+                <div class="topPart_action">
+                    <div class="likes_div_post">
+                        <mat-icon>thumb_up</mat-icon>
+                        <p>{{post.numberOfLikes}}</p>
+                    </div>
+                    <p *ngIf="post.numberOfShares == 0"></p>
+                    <p *ngIf="post.numberOfShares == 1">{{post.numberOfShares}} Share</p>
+                    <p *ngIf="post.numberOfShares > 1">{{post.numberOfShares}} Shares</p>
+                </div>
+                <div class="bottomPart_action">
+                    <button mat-button>
+                        <div class="actionButton_post">
+                            <mat-icon>thumb_up</mat-icon>
+                            <p>Like</p>
+                        </div>
+                    </button>
+                    <button mat-button>
+                        <div class="actionButton_post">
+                            <mat-icon>mode_comment</mat-icon>
+                            <p>Comment</p>
+                        </div>
+                    </button>
+                    <button mat-button>
+                        <div class="actionButton_post">
+                            <mat-icon>share</mat-icon>
+                            <p>Share</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
     

@@ -1,6 +1,59 @@
 <div id="leftPanel">
-    <div class="link" *ngFor="let link of links">
-        <div class="square"></div>
-        <p>Link</p>
-    </div>    
+    
+    <div class="link">
+        <div id=profilePicture_link style="background-image: url({{my_account_data.profilePicture}});"></div>
+        <p>{{my_account_data.firstName}} {{my_account_data.lastName}}</p>
+    </div> 
+
+    <div class="link">
+        <mat-icon id="friends_link">people</mat-icon>
+        <p>Friends</p>
+    </div>
+    
+    <div class="link">
+        <mat-icon id="groups_link">groups</mat-icon>
+        <p>Groups</p>
+    </div>  
+
+    <div class="link">
+        <mat-icon id="marketplace_link">storefront</mat-icon>
+        <p>Marketplace</p>
+    </div>  
+
+    <div class="link">
+        <mat-icon id="watch_link">ondemand_video</mat-icon>
+        <p>Watch</p>
+    </div>  
+    
+    <div class="link">
+        <mat-icon id="memories_link">history</mat-icon>
+        <p>Memories</p>
+    </div>  
+
+    <div class="link">
+        <mat-icon id="saved_link">bookmark</mat-icon>
+        <p>Saved</p>
+    </div>
+
+    <div class="link">
+        <mat-icon id="pages_link">flag</mat-icon>
+        <p>Pages</p>
+    </div>
+
+    <div class="link">
+        <mat-icon id="events_link">event</mat-icon>
+        <p>Events</p>
+    </div>
+
+    <div class="link">
+        <mat-icon id="jobs_link">work</mat-icon>
+        <p>Jobs</p>
+    </div>
+
+    <div class="link">
+        <div id="more_link_DIV">
+            <span><mat-icon id="more_link">expand_more</mat-icon></span>
+        </div>
+        <p>See more</p>
+    </div>
 </div>

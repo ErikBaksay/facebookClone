@@ -1,3 +1,4 @@
+import { my_account_data } from './../../my_account_data';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.sass']
 })
 export class NavbarComponent implements OnInit {
+
+  my_account_data = my_account_data
 
   constructor() { }
 

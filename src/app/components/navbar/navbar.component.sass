@@ -19,7 +19,10 @@
             height: 4vh
             width: 4vh
             margin-left: 1vw 
-            background-color: #147dbe
+            background-color: #2374E1
+            background-repeat: no-repeat
+            background-size: cover
+            background-image: url(./../../../assets/images/logo/facebook_logo.png)
             border-radius: 100px
         #searchBar
             background-color: #353535
@@ -37,20 +40,31 @@
         display: flex
         justify-content: space-between
         align-items: center
-        .squareIcon
+        .middleNavIcon
             height: 100%
-            width: 6vw
-            border-bottom: 4px solid #353535
+            width: 6vw  
             margin-bottom: 2px
             display: flex
             flex-direction: row
             align-items: center
             justify-content: center
-            .square
-                height: 3vh
-                width: 3vh
-                background-color: #353535
-            
+            mat-icon
+                font-size: 2em
+                color: #CCCCCC
+        .middleNavIcon:hover
+            background-color: #3A3B3C
+            border-radius: 16px
+            height: 85%
+            cursor: pointer
+        .selected
+            border-bottom: 3px solid #2374E1
+            mat-icon 
+                color: #2374E1
+        .selected:hover
+            background-color: #242424
+            border-radius: 0px
+            height: 100%
+            cursor: pointer
 
     #rightSection
         grid-area: rightSection
@@ -64,9 +78,27 @@
             margin-right: 0.5vw 
             background-color: #353535
             border-radius: 100px
+            display: flex
+            flex-direction: row
+            place-content: center
+            align-items: center
+            text-align: center
+        #messenger_rightLink
+            mat-icon
+                font-size: 1.6em
         #nameTitle
             margin:0
             margin-right: 1.5vw
-            color: #8b8b8b
+            color: #CCCCCC
             font-weight: 400
             font-size: 1em
+        #myProfile_rightLink
+            display: flex
+            flex-direction: row
+            align-items: center
+            .circleIcon
+                height: 3vh
+                width: 3vh
+                background-repeat: no-repeat
+                background-size: cover
+            

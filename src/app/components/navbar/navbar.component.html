@@ -2,31 +2,43 @@
     
     <div id="leftSection">
         <div id=temporaryLogo></div>
-        <input type="text" id="searchBar" placeholder="Search">
+        <input type="text" id="searchBar" placeholder="Search Facebook">
     </div>
     
     <div id="middleSection">
-        <div class="squareIcon" *ngFor="let number of [1,2,3,4,5]">
-            <div class="square"></div>
+        <div class="middleNavIcon selected">
+            <mat-icon>home</mat-icon>
         </div>
+        <div class="middleNavIcon">
+            <mat-icon>people_outline</mat-icon>
+        </div>
+        <div class="middleNavIcon">
+            <mat-icon>ondemand_video</mat-icon>
+        </div>
+        <div class="middleNavIcon">
+            <mat-icon>storefront</mat-icon>
+        </div>
+        <div class="middleNavIcon">
+            <mat-icon>groups</mat-icon>
+        </div>  
     </div>
     
     <div id="rightSection">
-        <div class="circleIcon">
-
+        <div id="myProfile_rightLink">
+            <div class="circleIcon" style="background-image: url({{my_account_data.profilePicture}});"></div>
+            <p id="nameTitle">{{my_account_data.firstName}} {{my_account_data.lastName}}</p>
         </div>
-        <p id="nameTitle">Name</p>
-        <div class="circleIcon">
-            
+        <div class="circleIcon" id="menu_rightLink">
+            <mat-icon>menu</mat-icon>
         </div>
-        <div class="circleIcon">
-            
+        <div class="circleIcon" id="messenger_rightLink">
+            <mat-icon>chat_bubble</mat-icon>
         </div>
-        <div class="circleIcon">
-            
+        <div class="circleIcon" id="notifications_rightLink">
+            <mat-icon>notifications</mat-icon>
         </div>
-        <div class="circleIcon">
-            
+        <div class="circleIcon" id="more_rightLink">
+            <mat-icon>arrow_drop_down</mat-icon>
         </div>
     </div>
     

@@ -1,3 +1,4 @@
+import { my_account_data } from './../../my_account_data';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeftPanelComponent implements OnInit {
 
-  links = [1,2,3,4,5,6,7]
+  my_account_data = my_account_data
 
   constructor() { }
 

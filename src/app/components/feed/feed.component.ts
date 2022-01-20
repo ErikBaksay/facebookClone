@@ -1,3 +1,4 @@
+import { my_account_data } from './../../my_account_data';
 import { posts_data } from './../../posts_data';
 import { Component, OnInit } from '@angular/core';
 import { stories_data } from 'src/app/stories_data';
@@ -13,8 +14,8 @@ export class FeedComponent implements OnInit {
   stories = stories_data
   numberOfStories = this.stories.length
 
+  my_account_data = my_account_data
   users = users_data
-  myProfilePicture = "./assets/images/profile_pictures/0.jpg"
   peopleOnline = [1,3,6]
 
   posts = posts_data

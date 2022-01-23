@@ -7,5 +7,6 @@ export var my_account_data : user = {
     age : 21,
     profilePicture : './assets/images/profile_pictures/0.jpg',
     posts : [],
+    likedPosts : [],
     stories : [],
 }

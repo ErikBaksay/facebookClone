@@ -6,6 +6,7 @@ export interface user {
     age : number;
     profilePicture : string;
     posts : number[];
+    likedPosts : number[]
     stories : number[];
 
 }

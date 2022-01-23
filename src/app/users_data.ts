@@ -9,7 +9,8 @@ export var users_data : user[] = [
         age : 31,
         profilePicture : './assets/images/profile_pictures/1.jpg',
         posts : [],
-        stories : [],
+        likedPosts : [],
+        stories : [2],
     },
     {
         id : 2,
@@ -17,8 +18,9 @@ export var users_data : user[] = [
         lastName :  'Lambert',
         age : 26,
         profilePicture : './assets/images/profile_pictures/2.jpg',
-        posts : [],
-        stories : [],
+        posts : [2],
+        likedPosts : [],
+        stories : [1],
     },
     {
         id : 3,
@@ -26,8 +28,9 @@ export var users_data : user[] = [
         lastName :  'May',
         age : 21,
         profilePicture : './assets/images/profile_pictures/3.jpg',
-        posts : [],
-        stories : [],
+        posts : [1],
+        likedPosts : [],
+        stories : [5],
     },
     {
         id : 4,
@@ -36,7 +39,8 @@ export var users_data : user[] = [
         age : 19,
         profilePicture : './assets/images/profile_pictures/4.jpg',
         posts : [],
-        stories : [],
+        likedPosts : [],
+        stories : [3],
     },
     {
         id : 5,
@@ -45,7 +49,8 @@ export var users_data : user[] = [
         age : 24,
         profilePicture : './assets/images/profile_pictures/5.jpg',
         posts : [],
-        stories : [],
+        likedPosts : [],
+        stories : [4],
     },
     {
         id : 6,
@@ -53,8 +58,9 @@ export var users_data : user[] = [
         lastName :  'Rainey',
         age : 29,
         profilePicture : './assets/images/profile_pictures/6.jpg',
-        posts : [],
-        stories : [],
+        posts : [3],
+        likedPosts : [],
+        stories : [6],
     },
 
 ]

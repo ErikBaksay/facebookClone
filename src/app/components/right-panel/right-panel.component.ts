@@ -1,3 +1,7 @@
+import { friends_data } from './../../friends_data';
+import { users_data } from 'src/app/users_data';
+import { ads_data } from './../../ads_data';
+import { groups } from '../../groups_data';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,8 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RightPanelComponent implements OnInit {
 
-  ads = [1,2]
+  adsToDisplayIDs = [1,2]
+  ads = ads_data
   contacts = [1,2,3,4,5]
+  groups = groups
+  users = users_data
+  friendsIDs = friends_data
 
   constructor() { }
 

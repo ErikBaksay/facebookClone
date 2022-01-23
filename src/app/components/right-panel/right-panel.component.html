@@ -1,19 +1,31 @@
 <div id="rightPanel">
     
     <div id="groups">
-        GROUPS
+        <div id="groups_title">
+            <p>Suggested</p>
+        </div>
+        <div id="group_photo">
+            <img src="{{groups[0].banner}}" alt="Group banner">
+        </div>
+        <div id="group_details">
+            <p>{{groups[0].name}}</p>
+        </div>
+        <div id="group_join">
+            <button mat-flat-button><p>Join group</p></button>
+        </div>
     </div>
 
     <div class="border"></div>
 
     <div id="ads">
-        <p>ADS</p>
-        <div class="ad" *ngFor="let ad of ads">
+        <p id="ads_title">Sponsored</p>
+        <div class="ad" *ngFor="let adID of adsToDisplayIDs">
             <div class="ad_image">
-
+                <img src="{{ads[adID-1].image}}" alt="{{ads[adID-1].title}}">
             </div>
             <div class="ad_text">
-                AD TITLE
+                <p class="ad_title">{{ads[adID-1].title}}</p>
+                <a href="http://www.{{ads[adID-1].website}}" class="ad_website">{{ads[adID-1].website}}</a>
             </div>
         </div>
     </div>
@@ -21,13 +33,13 @@
     <div class="border"></div>
 
     <div id="contacts">
-        <p>CONTACTS</p>
-        <div class="contact" *ngFor="let contact of contacts">
+        <p id="contacts_main_title">Contacts</p>
+        <div class="contact" *ngFor="let friendID of friendsIDs">
             <div class="contact_photo">
-
+                <img src="{{users[friendID-1].profilePicture}}" alt="{{users[friendID-1].firstName}} {{users[friendID-1].lastName}}">    
             </div>
             <div class="contact_name">
-                <p>Name</p>
+                <p>{{users[friendID-1].firstName}} {{users[friendID-1].lastName}}</p>
             </div>
         </div>
     </div>

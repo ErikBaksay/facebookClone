@@ -28,7 +28,7 @@ export var posts_data : post[] = [
         timePosted : 0,
         userID : 6,
         photo : './assets/images/posts/3.jpg',
-        text : "Life moves pretty fast. If you don’t stop and look around once in a while, you could miss it. -Ferris Bueller’s Day Off",
+        text : "Life moves pretty fast. If you don't stop and look around once in a while, you could miss it. -Ferris Bueller’s Day Off",
         numberOfLikes : 140,
         numberOfComments : 0,
         numberOfShares : 0,

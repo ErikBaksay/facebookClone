@@ -22,6 +22,17 @@ export class FeedComponent implements OnInit {
 
   timePosted_temporary = ["5h","11h","1d"]
 
+  likePost(postID : number) {
+    if (this.my_account_data.likedPosts.includes(postID)){
+      let sliceID = this.my_account_data.likedPosts.indexOf(postID)
+      this.my_account_data.likedPosts.splice(sliceID,1)
+      this.posts.filter(x => x.id == postID)[0].numberOfLikes--
+      return
+    }
+    this.posts.filter(x => x.id == postID)[0].numberOfLikes++
+    this.my_account_data.likedPosts.push(postID)   
+  }
+
   constructor() { }
 
   ngOnInit(): void {

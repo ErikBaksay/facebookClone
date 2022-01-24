@@ -1,3 +1,10 @@
+This clone of Facebook was created as a way to practice my skills.
+It was created using Angular, Material Design, HTML, SASS and TypeScript.
+
+You can view it here: https://erikbaksay.github.io/facebook-clone-app/
+
+________________________________________________________________________
+
 # FacebookClone
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.

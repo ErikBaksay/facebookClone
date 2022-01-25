@@ -1,6 +1,8 @@
 This clone of Facebook was created as a way to practice my skills.
 It was created using Angular, Material Design, HTML, SASS and TypeScript.
 
+Only desktop is currently supported. Mobile Layout is not yet implemented.
+
 You can view it here: https://erikbaksay.github.io/facebook-clone-app/
 
 ________________________________________________________________________

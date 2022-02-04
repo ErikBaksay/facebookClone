@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <div class="story" *ngFor="let story of stories" style="background-image:url({{story.photo}})">
+        <div class="story" *ngFor="let story of stories" style="background-image:url({{story.thumbnail}})">
             <div class="storyProfilePictureContainer">
                 <img class="storyProfilePicture" src="{{users[story.userID-1].profilePicture}}" alt="Profile photo">
             </div>

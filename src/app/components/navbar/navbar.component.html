@@ -1,6 +1,6 @@
 <div id="navbar">
     
-    <div id="leftSection">
+    <div *ngIf="desktop" id="leftSection">
         <div id=temporaryLogo></div>
         <input type="text" id="searchBar" placeholder="Search Facebook">
     </div>
@@ -10,20 +10,24 @@
             <mat-icon>home</mat-icon>
         </div>
         <div class="middleNavIcon">
-            <mat-icon>people_outline</mat-icon>
+            <mat-icon *ngIf="desktop">people_outline</mat-icon>
+            <mat-icon *ngIf="!desktop">ondemand_video</mat-icon>
         </div>
         <div class="middleNavIcon">
-            <mat-icon>ondemand_video</mat-icon>
+            <mat-icon *ngIf="desktop">ondemand_video</mat-icon>
+            <mat-icon *ngIf="!desktop">account_circle</mat-icon>
         </div>
         <div class="middleNavIcon">
-            <mat-icon>storefront</mat-icon>
+            <mat-icon *ngIf="desktop">storefront</mat-icon>
+            <mat-icon *ngIf="!desktop">notifications</mat-icon>
         </div>
         <div class="middleNavIcon">
-            <mat-icon>groups</mat-icon>
+            <mat-icon *ngIf="desktop">groups</mat-icon>
+            <mat-icon *ngIf="!desktop">menu</mat-icon>
         </div>  
     </div>
     
-    <div id="rightSection">
+    <div *ngIf="desktop" id="rightSection">
         <div id="myProfile_rightLink">
             <div class="circleIcon" style="background-image: url({{my_account_data.profilePicture}});"></div>
             <p id="nameTitle">{{my_account_data.firstName}} {{my_account_data.lastName}}</p>
@@ -39,6 +43,20 @@
         </div>
         <div class="circleIcon" id="more_rightLink">
             <mat-icon>arrow_drop_down</mat-icon>
+        </div>
+    </div>
+
+    <div *ngIf="!desktop" id="mobileTopSection">
+        <div id="facebookLogoMobile">
+            <h2>facebook</h2>
+        </div>
+        <div id="circleIconsMobile">
+            <div class="circleIcon" id="messenger_mobile">
+                <mat-icon>chat_bubble</mat-icon>
+            </div>
+            <div class="circleIcon" id="search_mobile">
+                <mat-icon>search</mat-icon>
+            </div>
         </div>
     </div>
     

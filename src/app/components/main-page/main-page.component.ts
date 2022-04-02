@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
+  desktop : boolean = true
+
   constructor() { }
 
   ngOnInit(): void {
+    if (window.screen.width >= 768) {
+      this.desktop = true;
+    }else{
+      this.desktop = false;
+    }
   }
-
 }

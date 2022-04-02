@@ -18,7 +18,7 @@
         #temporaryLogo
             height: 4vh
             width: 4vh
-            margin-left: 1vw 
+            margin-left: 1vw
             background-color: #2374E1
             background-repeat: no-repeat
             background-size: cover
@@ -34,7 +34,7 @@
             border-radius: 100px
             margin-left: 0.5vw
             font-size: 1em
-    
+
     #middleSection
         grid-area: middleSection
         display: flex
@@ -42,15 +42,15 @@
         align-items: center
         .middleNavIcon
             height: 100%
-            width: 6vw  
+            width: 6vw
             margin-bottom: 2px
             display: flex
             flex-direction: row
             align-items: center
             justify-content: center
             mat-icon
-                font-size: 2em
-                color: #CCCCCC
+            font-size: 2em
+            color: #CCCCCC
         .middleNavIcon:hover
             background-color: #3A3B3C
             border-radius: 16px
@@ -59,7 +59,7 @@
         .selected
             border-bottom: 3px solid #2374E1
             mat-icon 
-                color: #2374E1
+            color: #2374E1
         .selected:hover
             background-color: #242424
             border-radius: 0px
@@ -75,7 +75,7 @@
         .circleIcon
             height: 4vh
             width: 4vh
-            margin-right: 0.5vw 
+            margin-right: 0.5vw
             background-color: #353535
             border-radius: 100px
             display: flex
@@ -85,9 +85,9 @@
             text-align: center
         #messenger_rightLink
             mat-icon
-                font-size: 1.6em
+            font-size: 1.6em
         #nameTitle
-            margin:0
+            margin: 0
             margin-right: 1.5vw
             color: #CCCCCC
             font-weight: 400
@@ -101,4 +101,36 @@
                 width: 3vh
                 background-repeat: no-repeat
                 background-size: cover
-            
+    #mobileTopSection
+        display: grid
+        grid-auto-flow: column
+        grid-template-columns: 1fr 1fr
+        grid-template-areas: 'logo icons'
+        #facebookLogoMobile
+            display: flex
+            grid-area: logo
+            height: 100%
+            width: 100%
+            justify-content: flex-start
+            align-items: center
+            h2
+                font-size: 2em
+                line-height: 0
+                margin: 0
+        #circleIconsMobile
+            display: flex
+            grid-area: icons
+            height: 100%
+            width: 100%
+            flex-direction: row
+            justify-content: flex-end
+            align-items: center
+            line-height: 0
+            .circleIcon
+                padding: 10px
+@media only screen and ( max-width: 768px )
+    #navbar
+        height: 12vh
+        grid-template-rows: 6vh 6vh
+        grid-template-columns: 1fr
+        grid-template-areas: 'mobileTopSection' 'middleSection'

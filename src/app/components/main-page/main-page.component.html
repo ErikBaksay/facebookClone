@@ -1,5 +1,5 @@
 <div id="main_page_container">
-    <app-left-panel></app-left-panel>
+    <app-left-panel *ngIf="desktop"></app-left-panel>
     <app-feed></app-feed>
-    <app-right-panel></app-right-panel>
+    <app-right-panel *ngIf="desktop"></app-right-panel>
 </div>
